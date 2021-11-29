@@ -11,7 +11,7 @@ $ helm install my-release bitnami/contour
 
 Bitnami charts for Helm are carefully engineered, actively maintained and are the quickest and easiest way to deploy containers on a Kubernetes cluster that are ready to handle production workloads.
 
-This chart bootstraps a [Contour](https://projectcontour.io) Ingress Controller Deployment and a [Envoy Proxy](https://www.envoyproxy.io) Daemonset on a [Kubernetes](http://kubernetes.io) cluster using the [Helm](https://helm.sh) package manager.
+This chart bootstraps a [Contour](https://projectcontour.io) Ingress Controller Deployment and a [Envoy Proxy](https://www.envoyproxy.io) Daemonset on a [Kubernetes](https://kubernetes.io) cluster using the [Helm](https://helm.sh) package manager.
 
 Bitnami charts can be used with [Kubeapps](https://kubeapps.com/) for deployment and management of Helm Charts in clusters. This Helm chart has been tested on top of [Bitnami Kubernetes Production Runtime](https://kubeprod.io/) (BKPR). Deploy BKPR to get automated TLS certificates, logging and monitoring for your applications.
 
@@ -19,7 +19,7 @@ Bitnami charts can be used with [Kubeapps](https://kubeapps.com/) for deployment
 
 - Kubernetes 1.12+
 - Helm 3.1.0
-- An Operator for `ServiceType: LoadBalancer` like [MetalLB](../metallb/README.md)
+- An Operator for `ServiceType: LoadBalancer` like [MetalLB](https://github.com/bitnami/charts/tree/master/bitnami/metallb)
 
 ## Installing the Chart
 
