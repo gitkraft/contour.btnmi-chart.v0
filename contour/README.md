@@ -184,6 +184,7 @@ helm uninstall my-release
 | `contour.ingressClass.create`                                 | Whether to create or not the IngressClass resource                                                                                 | `true`                |
 | `contour.ingressClass.default`                                | Mark IngressClass resource as default for cluster                                                                                  | `true`                |
 | `contour.debug`                                               | Enable Contour debug log level                                                                                                     | `false`               |
+| `contour.logFormat`                                           | Set contour log-format. Default text, either text or json.                                                                         | `text`                |
 | `contour.kubernetesDebug`                                     | Contour kubernetes debug log level, Default 0, minimum 0, maximum 9.                                                               | `0`                   |
 | `contour.rootNamespaces`                                      | Restrict Contour to searching these namespaces for root ingress routes.                                                            | `""`                  |
 
@@ -418,7 +419,9 @@ helm uninstall my-release
 | `rbac.rules`        | Custom RBAC rules to set                                                                                             | `[]`   |
 | `tlsExistingSecret` | Name of the existingSecret to be use in both contour and envoy. If it is not nil `contour.certgen` will be disabled. | `""`   |
 
+Specify each parameter using the `--set key=value[,key=value]` argument to `helm install`. For example,
 
+```console
 helm install my-release \
   --set envoy.readinessProbe.successThreshold=5 \
     my-repo/contour
